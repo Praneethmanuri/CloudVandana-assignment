@@ -1,0 +1,17 @@
+import java.util.HashSet;
+public class JavaHungry{
+    public static void main(String args[]) {
+      String inputString = "Do you know how many total keywords present in Java";
+      inputString = inputString.toLowerCase().replaceAll(" ","");
+      char[] arr = inputString.toCharArray();
+      HashSet<Character> set = new HashSet<>();
+      for(char ch : arr)
+      {
+          set.add(ch);
+      }
+      if(set.size() == 26)
+        System.out.println("Input String is Pangram");
+      else
+        System.out.println("Input String is NOT Pangram");
+    }
+}
